@@ -1,0 +1,30 @@
+$lowlight: #0097a7;
+$primary: #00bcd4;
+
+.u-hover-ball-effect {
+  position: relative;
+  cursor: pointer;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0%;
+    height: 0%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition:
+      width 100ms ease-in-out,
+      height 100ms ease-in-out
+  }
+  &:hover {
+    color: white;
+    &:before {
+      background: $primary;
+      width: 35px;
+      height: 35px;
+      z-index: -1;
+    }
+  }
+}

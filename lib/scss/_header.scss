@@ -1,0 +1,123 @@
+.c-datepicker--horizontal {
+
+}
+
+.c-datepicker__header {
+  position: relative;
+}
+
+.c-datepicker__header-day {
+  height: 32px;
+  background: $lowlight;
+  color: white;
+  line-height: 32px;
+  font-size: 12px;
+  font-weight: 200;
+  letter-spacing: 0.3px;
+}
+
+.c-datepicker__header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.c-datepicker__header-date {
+  background: $primary;
+  height: 150px;
+  padding: 16px 0;
+}
+
+.c-datepicker--show-time:after {
+  content: 'access_time';
+  color: white;
+  visibility: visible;
+}
+
+.c-datepicker--show-calendar:after {
+  content: 'grid_on';
+  color: white;
+  visibility: visible;
+}
+
+.c-datepicker__header-date span {
+  display: block;
+  color: white;
+  margin: 4px 0;
+  transition: opacity 100ms ease-in-out;
+}
+
+.c-datepicker__header-date__month {
+  font-size: 24px;
+  opacity: 0.6;
+}
+
+.c-datepicker__header-date__day {
+  font-size: 64px;
+  opacity: 0.6;
+}
+
+.c-datepicker__header-date__time {
+  font-size: 25px;
+  opacity: 0.6;
+
+  > span {
+    display: inline-block;
+  }
+}
+
+.c-datepicker--show-time:checked ~ .c-datepicker__header .c-datepicker__header-date__time {
+  opacity: 1
+}
+
+.c-datepicker--show-calendar:checked {
+  ~ .c-datepicker__header {
+    .c-datepicker__header-date__month, .c-datepicker__header-date__day {
+      opacity: 1
+    }
+  }
+}
+
+.c-datepicker__header-toggle {
+  position: absolute;
+  top: 50%;
+  color: white;
+  cursor: pointer;
+
+  i {
+    font-size: 26px;
+  }
+}
+
+.c-datepicker__header-toggle--left {
+  left: 20px;
+}
+
+.c-datepicker__header-toggle--right {
+  right: 20px;
+}
+
+.c-datepicker__header-toggle--inactive {
+  opacity: 0.2;
+}
+
+.c-datepicker__toggle {
+  top: 170px;
+  width: 23px;
+  visibility: hidden;
+  opacity: 0.5;
+  z-index: 1;
+  transition: opacity 200ms ease-in-out;
+}
+
+.c-datepicker__toggle--right {
+  right: 10px;
+}
+
+.c-datepicker__toggle--left {
+  left: 10px;
+}
+
+.c-datepicker__toggle:checked {
+  opacity: 1;
+}

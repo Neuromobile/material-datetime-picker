@@ -1,0 +1,10 @@
+// import config variables (colours etc)
+@import "./config";
+// import the base container styles
+@import "./container";
+// header styles
+@import "./header";
+// calendar styles, mostly overriden from rome
+@import "./calendar";
+// clock styles
+@import "./clock";
