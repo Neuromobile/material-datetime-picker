@@ -324,6 +324,9 @@ var DateTimePicker = function (_Events) {
         this.value = moment(0);
         this.setDate(this.options.default);
         this.setTime(this.options.default);
+      } else {
+        this.setDate(this.value);
+        this.setTime(this.value);
       }
 
       this.initializeRome(this.$('.' + this.options.styles.container), this.options.dateValidator);
