@@ -316,7 +316,7 @@ var DateTimePicker = function (_Events) {
         //  and deal with updating the view only).
         // For now this allows us to set the default time using the same quantize
         // rules as setting the date explicitly. Setting this.value meets setTime|Date's
-        // expectation that we have a value, and `0` guarantees that we will detect 
+        // expectation that we have a value, and `0` guarantees that we will detect
         this.value = moment(0);
         this.setDate(this.options.default);
         this.setTime(this.options.default);
@@ -382,7 +382,7 @@ var DateTimePicker = function (_Events) {
       }, false);
       this.$('.js-clock-hours .' + this.options.styles.clockNum).forEach(function (el) {
         el.addEventListener('click', function (e) {
-          return _this4.clickClickHour(e);
+          return _this4.clickClickHour(e).showMinuteClock();
         }, false);
         el.addEventListener('mouseenter', function (e) {
           return _this4.mouseInHourClock(e);
